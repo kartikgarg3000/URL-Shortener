@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+        }
+        /* Container for login form */
+        .login-container {
+            background-color: #fff;
+            padding: 2rem;
+            width: 350px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .login-container h1 {
+            font-size: 24px;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        /* Styling for labels and inputs */
+        .login-container label {
+            display: block;
+            font-size: 14px;
+            margin-top: 1rem;
+            color: #666;
+            text-align: left;
+        }
+        .login-container input[type="email"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 0.8rem;
+            margin-top: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        /* Styling for the button */
+        .login-container button {
+            margin-top: 1.5rem;
+            width: 100%;
+            padding: 0.8rem;
+            background-color: #6e8efb;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .login-container button:hover {
+            background-color: #5a7ad4;
+        }
+        /* Additional text styling */
+        .login-container p {
+            font-size: 12px;
+            color: #666;
+            margin-top: 1rem;
+        }
+        .login-container a {
+            color: #6e8efb;
+            text-decoration: none;
+        }
+        .login-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+        <form action="/user/login" method="post">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="submit">Login</button>
+        </form>
+        <p>Don’t have an account? <a href="/signup">Sign up</a></p>
+    </div>
+</body>
+</html>
